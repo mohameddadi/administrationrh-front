@@ -1,0 +1,63 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+           
+  <!-- Navbar brand -->
+  <logo><a class="navbar-brand" href="#">Navbar</a></logo>
+
+  <!-- Collapsible content -->
+  <links>
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+              <a class="nav-link waves-light" mdbRippleRadius>Home<span class="sr-only">(current)</span></a>
+          </li>
+          <!--  [routerLink]="['enseignents']" -->
+         <!--  <li class="nav-item">
+              <a class="nav-link waves-light"  mdbRippleRadius>Enseignents</a>
+          </li> -->
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown" dropdown>
+            <a dropdownToggle mdbRippleRadius type="button" 
+            class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+            Enseignents<span class="caret"></span></a>
+            <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                <a class="dropdown-item waves-light" mdbRippleRadius routerLink="/enseignents/create">Créer</a>
+                <a class="dropdown-item waves-light" mdbRippleRadius routerLink ="/enseignents/list">Liste enseignents</a>
+    
+            </div>
+        </li>
+  
+          <!-- Dropdown -->
+          <li class="nav-item dropdown" dropdown>
+              <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+              Directeurs<span class="caret"></span></a>
+              <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                  <a class="dropdown-item waves-light" mdbRippleRadius href="#">Action</a>
+                  <a class="dropdown-item waves-light" mdbRippleRadius href="#">Another action</a>
+                  <a class="dropdown-item waves-light" mdbRippleRadius href="#">Something else here</a>
+                  <div class="divider dropdown-divider"></div>
+                  <a class="dropdown-item waves-light" mdbRippleRadius href="#">Separated link</a>
+              </div>
+          </li>
+
+      </ul>
+      <!-- Links -->
+
+      <!-- Search form -->
+      <form class="form-inline  waves-light" mdbRippleRadius>
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      </form>
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+<section>
+  <!-- Page content-->
+  <div class="content-wrapper">
+      <router-outlet></router-outlet>
+  </div>
+</section>

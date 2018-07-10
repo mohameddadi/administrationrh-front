@@ -1,0 +1,66 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Ajout Enseignent</div>
+<div class="panel-body">
+  <form [formGroup]="enseignentForm" (ngSubmit)="onSubmit(enseignentForm.value)">
+
+    <div class="form-group"> 
+        <div class="row">
+            <div class="col-sm-6">
+
+                <label class="center-block">Name:
+                  <input class="form-control" formControlName="name" >
+                </label>
+                <label class="center-block">Lastname:
+                  <input class="form-control" formControlName="lastname">
+                </label>
+                <label class="center-block">HiringDate:
+                  
+                  <my-date-picker name="hiringDate"
+                    formControlName="hiringDate"></my-date-picker>
+                </label>
+            </div>
+            <div class="col-sm-6">
+                <label class="center-block">Titre:
+                  <input class="form-control" formControlName="titre">
+                </label>
+                <label class="center-block">Phone:
+                  <input class="form-control" formControlName="phone">
+                </label>
+                <label class="center-block">UniqueIdentier:
+                  <input class="form-control" formControlName="uniqueIdentier">
+                </label>
+            </div>
+
+            <div class="col-sm-6">
+                <label class="center-block">Birthday:
+                   
+                    <my-date-picker name="birthday"
+                    formControlName="birthday"></my-date-picker>
+                </label>
+                <label class="center-block">NumberOfChildren:
+                  <input class="form-control" formControlName="numberOfChildren">
+                </label>
+                <label class="center-block">FamilySituation:
+                  <input class="form-control" formControlName="familySituation">
+                </label>
+            </div>    
+            <div class="col-sm-6">
+              <label class="center-block">NbrWorkedHoures:
+                  <input class="form-control" formControlName="nbrWorkedHoures">
+              </label>
+              <label class="center-block">Ecole:
+  
+                <select class="form-control" required
+                  formControlName="ecole" name="ecole">
+                  <option *ngFor="let ecole of ecoles" [value]="ecole.name">{{ecole.name}}</option>
+                </select>
+
+              </label>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
