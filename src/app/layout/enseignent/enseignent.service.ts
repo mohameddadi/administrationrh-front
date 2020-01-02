@@ -6,8 +6,8 @@ import { Observable } from "rxjs/Observable";
 @Injectable()
 export class EnseignentService {
 
-  private apiUrl = 'http://localhost:8080/enseignents/';
-  private enseignentApi = 'http://localhost:8080/enseignent/';
+  private apiUrl = 'http://localhost:8082/enseignents/';
+  private enseignentApi = 'http://localhost:8082/enseignent/';
  
   constructor(private http: Http) {
   }

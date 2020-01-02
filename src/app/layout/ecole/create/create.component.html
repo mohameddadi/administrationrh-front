@@ -1,14 +1,20 @@
-<form [formGroup]="ecoleForm">
+<div class="panel panel-default">
+  <div class="panel-heading">Ajout Ecole</div>
+<div class="panel-body">
+<form [formGroup]="ecoleForm" (ngSubmit)="onSubmit(ecoleForm.value)">
   <div class="form-group"> 
     <label class="center-block">Name:
-      <input class="form-control" [formControl]="name">
+      <input class="form-control" formControlName="name">
     </label>
     <label class="center-block">priority:
-      <input class="form-control" [formControl]="priority">
+      <input class="form-control" formControlName="priority">
     </label>
     <label class="center-block">type:
-      <input class="form-control" [formControl]="type">
+      <input class="form-control" formControlName="type">
     </label>
   </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
+</div>
 

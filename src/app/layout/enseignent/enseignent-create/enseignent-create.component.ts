@@ -81,6 +81,7 @@ export class EnseignentCreateComponent implements OnInit {
 
   onSubmit(value){
     console.log("form value == ",value);
+    value.hiringDate = value.hiringDate.jsdate; 
     this.enseignentService.addEnseignent(value).subscribe(response=>{
 
     }),

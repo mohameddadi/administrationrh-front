@@ -13,7 +13,8 @@ const routes: Routes = [
     path: '',
     component : LayoutComponent,
     children : [
-      {path: 'enseignents',loadChildren: 'app/layout/enseignent/enseignent.module#EnseignentModule'}
+      {path: 'enseignents', loadChildren: 'app/layout/enseignent/enseignent.module#EnseignentModule'},
+      {path: 'ecole', loadChildren: 'app/layout/ecole/ecole.module#EcoleModule'}
     ]
   },
 ];
